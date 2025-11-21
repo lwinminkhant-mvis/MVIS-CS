@@ -16,6 +16,8 @@ for letter in range(len(guess_word)):
 
 a = 0
 
+guesses = []
+
 hangman_drawing = ['''
      
      
@@ -82,7 +84,11 @@ ____|_____''']
 
 while True:
     
+    print("Your past guesses: " + ','.join(sorted(guesses)))
     guess_letter = input('guess a letter or word: ')
+    
+    guesses.append(guess_letter)
+
     if guess_letter == guess_word:
         print('\nWIN')
         print('''                   ___

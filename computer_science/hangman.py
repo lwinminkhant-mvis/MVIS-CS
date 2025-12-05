@@ -83,7 +83,7 @@ ____|_____''']
 while True:
     
     guess_letter = input('guess a letter or word: ')
-    if guess_letter == guess_word:
+    if '_' not in (word) or guess_letter == guess_word:
         print('\nWIN')
         print('''                   ___
                   |   |🔥
